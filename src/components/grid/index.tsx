@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { FC, Children } from 'react'
+import { Container, Row } from './styles' 
+import { Block } from './block'
 
-const Grid = () => {
+export const Grid: FC = () => {
+
   return (
-    <div data-cy='grid-container'>
-      <div data-cy='grid-row-container'>
-        <div data-cy='block'>
-
-        </div>
-      </div>
-    </div>
+    <Container data-cy='grid-container'>
+      {Children.toArray(
+          [...Array(9)].map((_, rowIndex) => (
+            <Row data-cy='grid-row-container' key={rowIndex}>
+              {Children.toArray(
+                [...Array(9)].map((_, colIndex) => 
+                  <Block
+                    colIndex={colIndex}
+                    rowIndex={rowIndex}
+                  />)
+              )}
+            </Row>
+          ))
+        )}
+    </Container>
   )
 }

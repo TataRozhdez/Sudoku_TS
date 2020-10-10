@@ -10,8 +10,8 @@ export const Container = styled.div`
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
-    font-weight: bold;
     font-size: 20px;
+    font-weight: bold;
     height: auto;
     justify-content: center;
     transition: ${theme.transition};
@@ -20,7 +20,7 @@ export const Container = styled.div`
     &:before {
       padding-top: 100%;
       content: '';
-      float: left; 
+      float: left;
     }
 
     &:hover {

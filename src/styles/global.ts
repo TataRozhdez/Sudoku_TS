@@ -8,15 +8,14 @@ export default createGlobalStyle`
       body {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: 100vh;
         margin: 0;
+        background: ${theme.colors.background};
+        color: ${theme.colors.black};
 
         #root {
-          background: ${theme.colors.background};
-          color: ${theme.colors.black};
           display: flex;
           font-family: sans-serif;
-          height: 100%;
           justify-content: center;
           padding: 15px;
         }
